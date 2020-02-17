@@ -15,6 +15,8 @@ func _physics_process(delta):
 		explosion.position= position
 		explosion.get_node("AnimatedSprite").playing=true
 		get_node("/root/Game/Explosions").add_child(explosion)
+		var camera = get_node("/root/Game/Camera2D")
+		camera.base = 5
 		if c.get_parent().name == "Enemies":
 			Player.change_score(c.score)
 			c.die()

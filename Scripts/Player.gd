@@ -58,5 +58,4 @@ func _physics_process(delta):
 	if position.y < VP.y-y_range:
 		velocity.y =0
 		position.y = VP.y-y_range
-	print(points)
 	var collision=move_and_collide(velocity)

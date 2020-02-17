@@ -18,7 +18,9 @@ func _physics_process(delta):
 	var colliding = get_colliding_bodies()
 	for c in colliding:
 		var explosion = Explosion.instance()
+		
 		explosion.position = position
+		
 		explosion.get_node("AnimatedSprite").playing=true
 		get_node("/root/Game/Explosions").add_child(explosion)
 		if c.name == "Player":
